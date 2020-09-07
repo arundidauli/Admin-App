@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="6sp"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:id="@+id/rl_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/product_image"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:foreground="@drawable/background_black_gradation"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/room" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="@dimen/padding_8dp"
+            android:padding="@dimen/padding_4sp"
+            android:src="@mipmap/like" />
+
+        <TextView
+            android:id="@+id/txt_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/product_image"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:paddingStart="@dimen/padding_4sp"
+            android:paddingLeft="@dimen/padding_4sp"
+            android:paddingTop="@dimen/padding_8dp"
+            android:paddingBottom="@dimen/padding_4sp"
+            android:text="Awesome Looking"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/location_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_title"
+            android:layout_marginStart="@dimen/padding_8dp"
+            android:layout_marginEnd="@dimen/padding_8dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/padding_4sp"
+            android:paddingTop="@dimen/padding_8dp"
+            android:paddingRight="@dimen/padding_4sp"
+            android:paddingBottom="@dimen/padding_8dp">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:padding="@dimen/padding_4sp"
+                android:src="@mipmap/location" />
+
+            <TextView
+                android:id="@+id/txt_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="@dimen/padding_8dp"
+                android:paddingRight="@dimen/padding_8dp"
+                android:text="Noida, Sector 6 -"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/txt_name_age"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="1.1 km from destination"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/location_distance"
+            android:layout_marginStart="@dimen/padding_8dp"
+            android:layout_marginEnd="@dimen/padding_8dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/padding_4sp"
+            android:paddingTop="@dimen/padding_8dp"
+            android:paddingRight="@dimen/padding_4sp"
+            android:paddingBottom="@dimen/padding_8dp">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:padding="@dimen/padding_4sp"
+                android:src="@mipmap/star" />
+
+            <TextView
+                android:id="@+id/txt_rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="@dimen/padding_8dp"
+                android:paddingRight="@dimen/padding_8dp"
+                android:text="4.0"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/txt_reviews"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text=" ( 1220 reviews )"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="0.58sp"
+            android:layout_below="@id/rating"
+            android:layout_margin="@dimen/padding_8dp"
+            android:background="@color/colorPrimaryDark" />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/line"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="\u20b9 1240.00 "
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="per night" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/line"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/img_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="@dimen/padding_8dp"
+                android:layout_marginRight="@dimen/padding_8dp"
+                android:padding="@dimen/padding_4sp"
+                android:src="@mipmap/edit"
+                app:tint="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/img_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/padding_8dp"
+                android:layout_marginLeft="@dimen/padding_8dp"
+                android:padding="@dimen/padding_4sp"
+                android:src="@mipmap/delete"
+                app:tint="@color/yellow" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
