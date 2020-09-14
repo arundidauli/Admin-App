@@ -22,12 +22,18 @@
                 android:orientation="horizontal"
                 android:layout_marginTop="@dimen/fui_body_padding_bottom">
                 <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/user_image"
                     android:layout_width="60dp"
                     android:layout_height="60dp"
-                    android:src="@mipmap/user"
+                    android:layout_marginRight="@dimen/fui_body_padding_bottom"
+                    android:padding="@dimen/padding_4sp"
                     android:layout_marginLeft="@dimen/fui_body_padding_bottom"
-                    android:layout_marginRight="@dimen/fui_body_padding_bottom"/>
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/admin"
+                    app:civ_border_color="@color/white"
+                    app:civ_border_width="0.56sp" />
                 <TextView
+                    android:id="@+id/txt_user"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:text="@string/app_name"
@@ -35,8 +41,10 @@
                     android:layout_weight="1"
                     android:textSize="18sp"
                     android:padding="@dimen/padding_8dp"
-                    android:textColor="@color/white"/>
+                    android:textColor="@color/white" />
+
                 <ImageView
+                    android:id="@+id/img_notification"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/ic_notification"
@@ -44,6 +52,14 @@
                     app:tint="@color/white"
                     android:layout_marginRight="@dimen/fui_body_padding_bottom" />
 
+                <ImageView
+                    android:id="@+id/img_logout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/fui_body_padding_bottom"
+                    android:layout_marginRight="@dimen/fui_body_padding_bottom"
+                    android:src="@drawable/ic_baseline_exit_to_app_24"
+                    app:tint="@color/white" />
 
             </LinearLayout>
 

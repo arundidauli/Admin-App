@@ -8,6 +8,10 @@
         <item name="android:windowAnimationStyle">@style/windowanimationtransition</item>
     </style>
 
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
 
     <style name="FullScreen" parent="AppTheme">
         <item name="windowActionBar">false</item>
@@ -15,6 +19,7 @@
         <item name="windowNoTitle">true</item>
         <item name="android:windowBackground">#FFFFFF</item>
     </style>
+
     <style name="windowanimationtransition">
         <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
         <item name="android:windowExitAnimation">@android:anim/fade_out</item>

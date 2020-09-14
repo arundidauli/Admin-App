@@ -1,4 +1,4 @@
-package com.wingshield.technologies.adminapp.product;
+package com.wingshield.technologies.adminapp.subcategory;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -11,8 +11,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.bumptech.glide.Glide;
 import com.wingshield.technologies.adminapp.R;
+import com.wingshield.technologies.adminapp.product.Product;
 
 import java.util.List;
 
@@ -20,12 +20,12 @@ import java.util.List;
  * Created by Arun Kumar on 14/8/20.
  * Copyright (c) 2020  Wingshield Technologies
  */
-public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.MyViewHolder> {
+public class SubCategoryAdapter extends RecyclerView.Adapter<SubCategoryAdapter.MyViewHolder> {
     private Context context;
     private List<Product> productList;
 
 
-    public ProductAdapter(Context context, List<Product> productList) {
+    public SubCategoryAdapter(Context context, List<Product> productList) {
         this.context = context;
         this.productList = productList;
     }
@@ -42,11 +42,6 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.MyViewHo
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
 
-        holder.txt_title.setText(productList.get(position).getProduct_name());
-        Glide.with(context).load(productList.get(position).getProduct_image())
-                .placeholder(R.mipmap.room)
-                .into(holder.product_image);
-
         holder.img_edit.setOnClickListener(view -> {
 
         });
@@ -57,24 +52,17 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.MyViewHo
 
     @Override
     public int getItemCount() {
-        return productList.size();
+        return 9;
     }
 
     static class MyViewHolder extends RecyclerView.ViewHolder {
-        private TextView txt_title, txt_location, txt_distance, txt_rating, txt_reviews;
-        private ImageView img_edit, img_delete, product_image;
+        private TextView txt_location, txt_name_age, txt_online;
+        private ImageView img_edit, img_delete;
         private RelativeLayout rl_layout;
 
         MyViewHolder(View view) {
             super(view);
-            txt_title = view.findViewById(R.id.txt_title);
-            txt_location = view.findViewById(R.id.txt_location);
-            txt_distance = view.findViewById(R.id.txt_distance);
-            txt_rating = view.findViewById(R.id.txt_rating);
-            txt_reviews = view.findViewById(R.id.txt_reviews);
-            product_image = view.findViewById(R.id.product_image);
             img_edit = view.findViewById(R.id.img_edit);
-            rl_layout = view.findViewById(R.id.rl_layout);
             img_delete = view.findViewById(R.id.img_delete);
 
 

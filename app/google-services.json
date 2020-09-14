@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "965664288547",
+    "firebase_url": "https://admin-panel-525ee.firebaseio.com",
+    "project_id": "admin-panel-525ee",
+    "storage_bucket": "admin-panel-525ee.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:965664288547:android:9d96723f8134e40d8aa696",
+        "android_client_info": {
+          "package_name": "com.wingshield.technologies.adminapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "965664288547-fe11r2daf7h3l0h6chfcg1n8s2ucc67g.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.wingshield.technologies.adminapp",
+            "certificate_hash": "f5ea385df7275bc09a2c94c44a46b8218aeb1af3"
+          }
+        },
+        {
+          "client_id": "965664288547-eddmk3amice4nqiv1ueajg6skmgerq51.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGkaef099D7C1jIZS0G-wpWdDqYOo3sxo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "965664288547-eddmk3amice4nqiv1ueajg6skmgerq51.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

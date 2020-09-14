@@ -35,7 +35,7 @@ public class PanelAdapter extends RecyclerView.Adapter<PanelAdapter.MyViewHolder
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View itemView = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.product_item_row, parent, false);
+                .inflate(R.layout.panel_item_row, parent, false);
 
         return new MyViewHolder(itemView);
     }

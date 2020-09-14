@@ -2,15 +2,16 @@ package com.wingshield.technologies.adminapp.product;
 
 public class Product {
     private String id;
-    private String product_name;
-    private String product_category;
-    private String product_image;
     private String product_id;
+    private String product_category;
+    private String product_subcategory;
+    private String product_image;
+    private String product_name;
     private String product_title;
     private String product_description;
     private String product_mrp;
     private String product_price;
-    private String product_discount;
+    private String product_location;
     private boolean product_is_approve;
 
 
@@ -25,12 +26,12 @@ public class Product {
         this.id = id;
     }
 
-    public String getProduct_name() {
-        return product_name;
+    public String getProduct_id() {
+        return product_id;
     }
 
-    public void setProduct_name(String product_name) {
-        this.product_name = product_name;
+    public void setProduct_id(String product_id) {
+        this.product_id = product_id;
     }
 
     public String getProduct_category() {
@@ -41,6 +42,14 @@ public class Product {
         this.product_category = product_category;
     }
 
+    public String getProduct_subcategory() {
+        return product_subcategory;
+    }
+
+    public void setProduct_subcategory(String product_subcategory) {
+        this.product_subcategory = product_subcategory;
+    }
+
     public String getProduct_image() {
         return product_image;
     }
@@ -49,12 +58,12 @@ public class Product {
         this.product_image = product_image;
     }
 
-    public String getProduct_id() {
-        return product_id;
+    public String getProduct_name() {
+        return product_name;
     }
 
-    public void setProduct_id(String product_id) {
-        this.product_id = product_id;
+    public void setProduct_name(String product_name) {
+        this.product_name = product_name;
     }
 
     public String getProduct_title() {
@@ -89,12 +98,12 @@ public class Product {
         this.product_price = product_price;
     }
 
-    public String getProduct_discount() {
-        return product_discount;
+    public String getProduct_location() {
+        return product_location;
     }
 
-    public void setProduct_discount(String product_discount) {
-        this.product_discount = product_discount;
+    public void setProduct_location(String product_location) {
+        this.product_location = product_location;
     }
 
     public boolean isProduct_is_approve() {
