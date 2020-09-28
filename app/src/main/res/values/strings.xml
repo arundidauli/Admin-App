@@ -8,4 +8,5 @@
     <string name="dialog_permission_message">You need to granted permission</string>
     <string name="go_to_settings">Go to setting</string>
     <string name="action_settings">Setting</string>
+    <string name="fruits_vegetables"><![CDATA[Fruits & Vegetables]]></string>
 </resources>

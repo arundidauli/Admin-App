@@ -13,6 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.wingshield.technologies.adminapp.R;
+import com.wingshield.technologies.adminapp.category.CategoryActivity;
 import com.wingshield.technologies.adminapp.product.ProductActivity;
 
 import java.util.List;
@@ -45,15 +46,24 @@ public class PanelAdapter extends RecyclerView.Adapter<PanelAdapter.MyViewHolder
         holder.ll_root.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(context, ProductActivity.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                intent.putExtra("title", "Product");
-                context.startActivity(intent);
+                if (position == 2) {
+                    Intent intent = new Intent(context, CategoryActivity.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    intent.putExtra("title", "Product Category");
+                    context.startActivity(intent);
+                } else {
+                    Intent intent = new Intent(context, ProductActivity.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    intent.putExtra("title", "Product");
+                    context.startActivity(intent);
+                }
 
 
             }
         });
+
 
     }
 

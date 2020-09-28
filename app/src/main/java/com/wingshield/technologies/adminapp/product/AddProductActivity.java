@@ -285,7 +285,7 @@ public class AddProductActivity extends AppCompatActivity {
 
     }
 
-////
+
     private void saveProduct() {
         String id = mDatabaseReference.child("product").push().getKey();
         Product product = new Product();

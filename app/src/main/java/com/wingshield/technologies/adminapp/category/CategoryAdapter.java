@@ -11,8 +11,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.wingshield.technologies.adminapp.R;
-import com.wingshield.technologies.adminapp.product.Product;
 
 import java.util.List;
 
@@ -22,25 +22,29 @@ import java.util.List;
  */
 public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.MyViewHolder> {
     private Context context;
-    private List<Product> productList;
+    private List<ProductCategory> productCategoryList;
 
 
-    public CategoryAdapter(Context context, List<Product> productList) {
+    public CategoryAdapter(Context context, List<ProductCategory> productCategoryList) {
         this.context = context;
-        this.productList = productList;
+        this.productCategoryList = productCategoryList;
     }
 
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View itemView = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.product_item_row, parent, false);
+                .inflate(R.layout.product_category_item_row, parent, false);
 
         return new MyViewHolder(itemView);
     }
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
+
+        holder.txt_category_name.setText(productCategoryList.get(position).getCategory_name());
+        Glide.with(context).load(productCategoryList.get(position).getCategory_image()).placeholder(R.mipmap.ic_launcher).into(holder.category_image);
+
 
         holder.img_edit.setOnClickListener(view -> {
 
@@ -52,18 +56,20 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.MyView
 
     @Override
     public int getItemCount() {
-        return 9;
+        return productCategoryList.size();
     }
 
     static class MyViewHolder extends RecyclerView.ViewHolder {
-        private TextView txt_location, txt_name_age, txt_online;
-        private ImageView img_edit, img_delete;
+        private TextView txt_category_name;
+        private ImageView img_edit, img_delete, category_image;
         private RelativeLayout rl_layout;
 
         MyViewHolder(View view) {
             super(view);
             img_edit = view.findViewById(R.id.img_edit);
             img_delete = view.findViewById(R.id.img_delete);
+            txt_category_name = view.findViewById(R.id.txt_category_name);
+            category_image = view.findViewById(R.id.category_image);
 
 
         }
